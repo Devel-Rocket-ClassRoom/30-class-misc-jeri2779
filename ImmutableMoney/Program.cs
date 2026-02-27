@@ -43,29 +43,48 @@
 //```
 
 using System;
+using static System.Math;
 
 
+Console.WriteLine("=== 초기 화폐 ===");
+Money wallet = new Money(100, 50);
+Console.WriteLine($"지갑: {wallet}");
 
+Console.WriteLine("\n=== 화폐 추가 ===");
+Money addedWallet = wallet.Add(50, 30);
+Console.WriteLine($"추가 후: {addedWallet}");
+Console.WriteLine($"원본 지갑: {wallet}"); // 원본은 유지됨 (불변성)
+
+Console.WriteLine("\n=== 화폐 차감 ===");
+Money subtractedWallet = wallet.Subtract(20, 30);
+Console.WriteLine($"차감 후: {subtractedWallet}");
+Console.WriteLine($"원본 지갑: {wallet}");
+
+Console.WriteLine("\n=== 메서드 체이닝 ===");
+// Add 실행 결과(새 객체)에 바로 Subtract 호출
+Money chainResult = wallet.Add(50, 0).Subtract(30, 20);
+Console.WriteLine($"결과: {chainResult}");
 public class Money
 {
     public int Gold { get; }
     public int Silver { get; }
     public Money(int gold, int silver)
     {
-        Gold = gold;
-        Silver = silver;
+        Gold = Max(0, gold);
+        Silver = Max(0, silver);
     }
+    // 화폐 추가: 현재 값을 바탕으로 '새로운' Money 객체 생성
     public Money Add(int gold, int silver)
     {
-         
+        return new Money( Gold + gold,  Silver + silver);
     }
     public Money Subtract(int gold, int silver)
     {
-       
+       return new Money(Gold - gold, Silver - silver);
     }
     public override string ToString()
     {
-          
+        return $"{Gold}골드 {Silver}실버";
     }
 }
 
