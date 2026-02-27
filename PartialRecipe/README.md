@@ -11,11 +11,15 @@
 - 재료 배열과 재료 개수를 저장하는 필드
 - 생성자: 이름, 인분, 최대 재료 수를 매개변수로 받음
 
-**조리 부분 (두 번째 partial class - `Recipe.Cooking.cs`)**
+**조리 부분 (두 번째 partial class - `Recipe.Cooking.cs`)
+**
 
-- `AddIngredient(string ingredient)`: 재료를 추가함 (배열이 가득 차면 메시지 출력)
-- `PrintRecipe()`: 레시피 이름, 인분, 재료 목록을 출력함
-- `HasIngredient(string ingredient)`: 특정 재료가 포함되어 있는지 확인함
+- `AddIngredient(string ingredient)`: 
+- 재료를 추가함 (배열이 가득 차면 메시지 출력)
+- `PrintRecipe()`: 
+- 레시피 이름, 인분, 재료 목록을 출력함
+- `HasIngredient(string ingredient)`: 
+- 특정 재료가 포함되어 있는지 확인함
 
 ## 예상 실행 결과
 

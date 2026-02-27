@@ -8,8 +8,10 @@
   - value가 min보다 작으면 min 반환
   - value가 max보다 크면 max 반환
   - 그 외에는 value 그대로 반환
-- `GetPercentage(int current, int max)`: 현재 값을 최대값 대비 백분율로 반환함
-- `IsInRange(int value, int min, int max)`: 값이 범위 내에 있는지 확인함
+- `GetPercentage(int current, int max)`: 
+- 현재 값을 최대값 대비 백분율로 반환함
+- `IsInRange(int value, int min, int max)`: 
+- 값이 범위 내에 있는지 확인함
 
 ## 예상 실행 결과
 
