@@ -72,5 +72,6 @@ class QueryBuilder
             sb.Append(" WHERE ");
             sb.Append(_where);
         }
+        return Build();
     }
 }
